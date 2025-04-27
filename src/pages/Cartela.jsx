@@ -56,7 +56,10 @@ function Cartela(){
       "Abridor de garrafa",
       "Bucha",
       "Porta-talheres",
-      "Saboneteira"
+      "Saboneteira",
+      "Cafeteira",
+      "xícara",
+      "Garrafa térmica"
     ]
     const navigate = useNavigate()
     const [matriz, setMatriz] = useState([])
@@ -116,7 +119,7 @@ function Cartela(){
       <div className="w-full mb-6">
           <div className="bg-amber-700 w-full text-white text-center py-2 font-bold text-xl rounded-md grid grid-cols-3 items-center px-4">
             <ChevronLeftIcon onClick={()=>{navigate(-1)}}/>
-            <p className="text-nowrap">Bingo de casa</p>
+            <p className="text-nowrap">Bingo de casa nova</p>
           </div>
       </div>
 

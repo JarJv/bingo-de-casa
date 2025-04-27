@@ -56,7 +56,10 @@ function Roleta(){
       "Abridor de garrafa",
       "Bucha",
       "Porta-talheres",
-      "Saboneteira"
+      "Saboneteira",
+      "Cafeteira",
+      "Xícara",
+      "Garrafa térmica"
     ])
     const navigate = useNavigate()
     let [sorteados, setSorteados] = useState([])
