@@ -52,11 +52,10 @@ function Cartela(){
       "Escova de cabelo",
       "Secador de cabelo",
       "Jogo de talheres",
-      "Desentupidor",
       "Air fryer",
       "Abridor de garrafa",
       "Bucha",
-      "Liquidificador",
+      "Porta-talheres",
       "Saboneteira"
     ]
     const navigate = useNavigate()
