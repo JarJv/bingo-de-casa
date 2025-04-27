@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 function Cartela(){
     const opcoes = [
-      "Copos",
       "Tapetes para cozinha",
       "Panos de prato",
       "Travessas",
@@ -48,7 +47,7 @@ function Cartela(){
       "Tapete antialérgico",
       "Umidificador de ar",
       "Espelho grande",
-      "Roupão felpudo",
+      "Roupão",
       "Escova de cabelo",
       "Secador de cabelo",
       "Jogo de talheres",

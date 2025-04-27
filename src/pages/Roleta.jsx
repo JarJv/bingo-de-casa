@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 function Roleta(){
     const [opcoes, setOpcoes] = useState([
-      "Copos",
       "Tapetes para cozinha",
       "Panos de prato",
       "Travessas",
@@ -48,7 +47,7 @@ function Roleta(){
       "Tapete antialérgico",
       "Umidificador de ar",
       "Espelho grande",
-      "Roupão felpudo",
+      "Roupão",
       "Escova de cabelo",
       "Secador de cabelo",
       "Jogo de talheres",
@@ -112,7 +111,7 @@ function Roleta(){
             {sorteio ? (
               <p className="text-3xl font-bold text-amber-950">{sorteio}</p>
             ) : (
-              <p className="text-xl text-gray-600 italic">Clique no botão para sortear um número</p>
+              <p className="text-xl text-gray-600 italic">Clique no botão para sortear um item</p>
             )}
           </div>
     
@@ -133,7 +132,7 @@ function Roleta(){
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="w-full p-4 flex items-center justify-between bg-amber-100 border-b border-amber-900 text-black"
             >
-              <span className="font-medium text-amber-950">Palavras sorteadas({sorteados.length})</span>
+              <span className="font-medium text-amber-950">Itens sorteados({sorteados.length})</span>
               <ChevronDown className={`w-5 h-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
     
@@ -153,7 +152,7 @@ function Roleta(){
                     ))}
                   </ul>
                 ) : (
-                  <p className="p-4 text-center text-gray-500 italic">Nenhuma palavra foi sorteada ainda</p>
+                  <p className="p-4 text-center text-gray-500 italic">Nenhuma item foi sorteado ainda</p>
                 )}
               </div>
             )}
