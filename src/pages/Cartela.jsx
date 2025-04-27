@@ -32,7 +32,32 @@ function Cartela(){
       "Tapetes para banheiro",
       "Porta escova de dentes",
       "Escova sanitária",
-      "Porta sabonete líquido"
+      "Porta sabonete líquido",
+      "Jogo de panela",
+      "Frigideira",
+      "Assadeira",
+      "Escorredor de arroz",
+      "Bule de chá",
+      "Avental de cozinha",
+      "Jogo de toalha",
+      "Jogo de prato",
+      "Jogo de copo",
+      "Jogo de cama",
+      "Cortinas",
+      "Geladeira",
+      "Tapete antialérgico",
+      "Umidificador de ar",
+      "Espelho grande",
+      "Roupão felpudo",
+      "Escova de cabelo",
+      "Secador de cabelo",
+      "Jogo de talheres",
+      "Desentupidor",
+      "Air fryer",
+      "Abridor de garrafa",
+      "Bucha",
+      "Liquidificador",
+      "Saboneteira"
     ]
     const navigate = useNavigate()
     const [matriz, setMatriz] = useState([])
