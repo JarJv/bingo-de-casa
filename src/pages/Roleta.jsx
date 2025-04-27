@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, Shuffle } from "lucide-react"
+import { ChevronDown, ChevronLeftIcon, Shuffle } from "lucide-react"
+import { useNavigate } from "react-router-dom";
 
 function Roleta(){
     const [opcoes, setOpcoes] = useState([
@@ -33,7 +34,7 @@ function Roleta(){
         "Escova sanitária",
         "Porta sabonete líquido"
     ])
-
+    const navigate = useNavigate()
     let [sorteados, setSorteados] = useState([])
     let [sorteio, setSorteio] = useState("")
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -73,7 +74,10 @@ function Roleta(){
     
     return (
         <div className="w-full max-w-md mx-auto p-4 flex flex-col items-center h-screen bg-amber-950">
-          <h1 className="text-2xl font-bold text-center mb-6 text-white">Roleta</h1>
+          <div className="w-full grid grid-cols-3 items-center text-white justify-center pb-6">
+            <ChevronLeftIcon onClick={()=>{navigate(-1)}}/>
+            <h1 className="text-2xl font-bold text-center text-white">Roleta</h1>
+          </div>
     
           {/* Current word display */}
           <div className="w-full bg-amber-100 rounded-lg shadow-lg p-6 mb-6 text-center">
@@ -81,7 +85,7 @@ function Roleta(){
             {sorteio ? (
               <p className="text-3xl font-bold text-amber-950">{sorteio}</p>
             ) : (
-              <p className="text-xl text-gray-200 italic">Clique no botão para sortear um número</p>
+              <p className="text-xl text-gray-600 italic">Clique no botão para sortear um número</p>
             )}
           </div>
     

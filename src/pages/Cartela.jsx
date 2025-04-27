@@ -52,28 +52,25 @@ function Cartela(){
     }
 
     function geraCartela() {
-        const novaMatriz = []
-        const usedNumbers = new Set()
+      const novaMatriz = []
+      let availableOptions = [...opcoes] // <- faz uma cópia da lista de opções
     
-        for (let i = 0; i < 5; i++) {
-          const linha = []
-          for (let j = 0; j < 5; j++) {
-            if (i === 2 && j === 2) {
-              linha.push({ value: "", marked: false, isFreeSpace: true })
-            } else {
-              let opcao, duplicado
-              do {
-                [opcao, duplicado] = checkOpcao(usedNumbers)
-              } while (duplicado || opcao === undefined)
+      for (let i = 0; i < 5; i++) {
+        const linha = []
+        for (let j = 0; j < 5; j++) {
+          if (i === 2 && j === 2) {
+            linha.push({ value: "", marked: false, isFreeSpace: true })
+          } else {
+            const randomIndex = Math.floor(Math.random() * availableOptions.length)
+            const opcao = availableOptions.splice(randomIndex, 1)[0] // pega e remove
     
-              usedNumbers.add(opcao)
-              linha.push({ value: opcao, marked: false, isFreeSpace: false })
-            }
+            linha.push({ value: opcao, marked: false, isFreeSpace: false })
           }
-          novaMatriz.push(linha)
         }
-        return novaMatriz
+        novaMatriz.push(linha)
       }
+      return novaMatriz
+    }
     
 
   useEffect(() => {
